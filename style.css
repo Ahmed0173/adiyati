@@ -1,0 +1,236 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --green: #173f35;
+    --green-light: #e7f0e9;
+    --gold: #c6a56b;
+    --background: #f7f7f2;
+    --text: #26352f;
+    --muted: #747d76;
+    --white: #ffffff;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Geeza Pro",
+        "Arial", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.9;
+}
+
+.header {
+    background: var(--green);
+    color: var(--white);
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.header-text {
+    font-size: 14px;
+    color: #dce8df;
+}
+
+.container {
+    width: min(900px, 90%);
+    margin: 35px auto;
+}
+
+.welcome {
+    background: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 22px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.welcome-label {
+    color: #e4c992;
+    margin-bottom: 12px;
+}
+
+.welcome h1 {
+    font-size: clamp(23px, 4vw, 32px);
+    margin-bottom: 10px;
+}
+
+.welcome > p:not(.welcome-label) {
+    color: #e0e9e3;
+}
+
+#today {
+    margin-top: 15px;
+    color: #e4c992;
+    font-size: 14px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    font-size: 23px;
+    margin-bottom: 4px;
+}
+
+.section-description {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.day-button {
+    border: 1px solid #dfe5dd;
+    background: var(--white);
+    color: var(--green);
+    border-radius: 12px;
+    padding: 13px 6px;
+    font: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.day-button:hover,
+.day-button.active {
+    background: var(--green);
+    color: var(--white);
+    border-color: var(--green);
+}
+
+.dua-card {
+    background: var(--white);
+    border: 1px solid #e8e9e1;
+    border-radius: 18px;
+    padding: 26px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(23, 63, 53, 0.04);
+}
+
+.card-label {
+    display: inline-block;
+    color: var(--green);
+    background: var(--green-light);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.dua-card h2,
+.dua-card h3 {
+    margin-bottom: 15px;
+}
+
+.dua-text {
+    font-family: "Geeza Pro", "Traditional Arabic", serif;
+    font-size: 23px;
+    line-height: 2.2;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+.source-link {
+    display: inline-block;
+    color: var(--green);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    font-size: 14px;
+}
+
+.source-link:hover {
+    color: #936d30;
+}
+
+.prayer-section {
+    margin-top: 40px;
+}
+
+.tasbih-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #edf0e9;
+}
+
+.tasbih-item:last-of-type {
+    margin-bottom: 20px;
+}
+
+.tasbih-item strong {
+    color: var(--green);
+    white-space: nowrap;
+}
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 25px 0;
+}
+
+footer p:first-child {
+    color: var(--green);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 500px) {
+    .header {
+        padding: 14px 5%;
+    }
+
+    .container {
+        width: 92%;
+        margin-top: 22px;
+    }
+
+    .welcome {
+        padding: 30px 15px;
+    }
+
+    .days {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .day-button {
+        font-size: 14px;
+        padding: 10px 4px;
+    }
+
+    .dua-card {
+        padding: 20px 16px;
+    }
+
+    .dua-text {
+        font-size: 21px;
+    }
+}
